@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Dragon
 
-  attr_reader :id, :name,
+  attr_reader :id, :name, :type
 
   def initialize(options)
     @id = options['id'].to_i
@@ -12,7 +12,7 @@ class Dragon
 
 # ---------------------------------------------------------
   def save()
-    sql = "INSERT INTO dragons (name, type) VALUES ('#{@name}', '#{@type}) RETURNING *"
+    sql = "INSERT INTO dragons (name, type) VALUES ('#{@name}', '#{@type}') RETURNING *"
     dragon = SqlRunner.run(sql).first
     @id = dragon['id'].to_i
   end

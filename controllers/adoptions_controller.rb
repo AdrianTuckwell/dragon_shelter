@@ -1,4 +1,4 @@
-equire 'pry-byebug'
+require 'pry-byebug'
 require_relative('../models/adoption.rb')
 
 #index

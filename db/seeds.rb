@@ -9,15 +9,15 @@ Owner.delete_all()
 
 # --- Create dragons -------------------------------------
 dragon1 = Dragon.new({ 'name' => 'Toothless', 'type' => 'Night Fury'})
-dragon2 = Dragon.new({ 'name' => 'Changewing', 'type' => 'Big Red'})
-dragon3 = Dragon.new({ 'name' => 'Deadly Nadder', 'type' => 'Paradice'})
-dragon4 = Dragon.new({ 'name' => 'Giant Bee-Eater', 'type' => 'Sunshine'})
-dragon5 = Dragon.new({ 'name' => 'Gronckle', 'type' => 'Rainbow'})
-dragon6 = Dragon.new({ 'name' => 'Hideous Zippleback', 'type' => 'Pheonix'})
-dragon7 = Dragon.new({ 'name' => 'Monstrous Nightmare', 'type' => 'Dark Dave'})
-dragon8 = Dragon.new({ 'name' => 'Seadragonus Giganticus Maximus (Red Death)', 'type' => 'Night Fury'})
-dragon9 = Dragon.new({ 'name' => 'Terrible Terror', 'type' => 'Carsten'})
-dragon10 = Dragon.new({ 'name' => 'Thunder Drum', 'type' => 'Slurge'})
+dragon2 = Dragon.new({ 'name' => 'Big Red', 'type' => 'Changewing'})
+dragon3 = Dragon.new({ 'name' => 'Paradice', 'type' => 'Deadly Nadder'})
+dragon4 = Dragon.new({ 'name' => 'Sunshine', 'type' => 'Giant Bee-Eater'})
+dragon5 = Dragon.new({ 'name' => 'Rainbow', 'type' => 'Gronckle'})
+dragon6 = Dragon.new({ 'name' => 'Pheonix', 'type' => 'Hideous Zippleback'})
+dragon7 = Dragon.new({ 'name' => 'Dark Dave', 'type' => 'Monstrous Nightmare'})
+dragon8 = Dragon.new({ 'name' => 'Night Fury', 'type' => 'Seadragonus Giganticus Maximus (Red Death)'})
+dragon9 = Dragon.new({ 'name' => 'Carsten', 'type' => 'Terrible Terror'})
+dragon10 = Dragon.new({ 'name' => 'Slurge', 'type' => 'Thunder Drum'})
 
 dragon1.save
 dragon2.save

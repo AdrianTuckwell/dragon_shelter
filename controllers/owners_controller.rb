@@ -1,5 +1,5 @@
 require 'pry-byebug'
-require_relative('../owners/book')
+require_relative('../models/owner')
 
 #index
 get '/owners' do

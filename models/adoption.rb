@@ -13,7 +13,7 @@ class Adoption
 # ---------------------------------------------------------
   def save()
     sql = "INSERT INTO adoptions (dragon_id, owner_id) VALUES (#{@dragon_id}, #{@owner_id}) RETURNING *"
-    rental = SqlRunner.run(sql).first
+    owner = SqlRunner.run(sql).first
     @id = owner['id']
   end
 

@@ -1,15 +1,14 @@
 Dragon Types:
 
-Changeling
-Deadly Nadder
-Giant Bee-Eater
-Gronckle
-Hideous Zippleback
-Monstrous Nightmare
-Night Fury              - Toothless
-Seadragonus Giganticus Maximus (Red Death)
-Terrible Terror
-Thunder Drum
+Changewing                                  - Big red
+Deadly Nadder                               - Paradise
+Giant Bee-Eater                             - Sunshine
+Gronckle                                    - Rainbow
+Hideous Zippleback                          - Pheonix
+Monstrous Nightmare                         - Dark Dave
+Night Fury                                  - Toothless
+Seadragonus Giganticus Maximus (Red Death)  - Carsten
+Terrible Terror                             - Slurge
+Thunder Drum                              - Van
 
-Horrorcow               - Basic Brown
 
