@@ -7,12 +7,44 @@ class Dragon
   def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
+    @type = options['type']
   end
 
 # ---------------------------------------------------------
   def save()
-    sql = "INSERT INTO dragons (name) VALUES ('#{@name}') RETURNING *"
+    sql = "INSERT INTO dragons (name, type) VALUES ('#{@name}', '#{@type}) RETURNING *"
     dragon = SqlRunner.run(sql).first
     @id = dragon['id'].to_i
   end
-end #--- Dragon Class end ---------------------------------
+
+# ---------------------------------------------------------
+  def self.all()
+    sql = "SELECT * FROM dragons"
+    return Dragon.map_items(sql)
+  end
+
+# ---------------------------------------------------------
+  def self.find(id)
+    sql = "SELECT * FROM dragons WHERE id = #{id}"
+    return Dragon.map_item(sql)
+  end
+
+# ---------------------------------------------------------
+  def self.delete_all()
+    sql = "DELETE FROM dragons"
+    SqlRunner.run(sql)
+  end
+
+# ---------------------------------------------------------
+  def self.map_items(sql)
+    dragons = SqlRunner.run(sql)
+    result = dragons.map { |dragon| Dragon.new( dragon ) }
+    return result
+  end
+
+# ---------------------------------------------------------
+  def self.map_item(sql)
+    result = Dragon.map_items(sql)
+    return result.first
+  end
+end # --- Dragon Class end --------------------------------

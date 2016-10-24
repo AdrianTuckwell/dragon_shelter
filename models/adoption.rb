@@ -16,4 +16,42 @@ class Adoption
     rental = SqlRunner.run(sql).first
     @id = owner['id']
   end
+
+# ---------------------------------------------------------
+  def adoption()
+    sql = "SELECT * FROM adoptions WHERE id = #{@dragon_id}"
+    return Dragon.map_item(sql)
+  end
+
+# ---------------------------------------------------------
+  def Owner()
+    sql = "SELECT * FROM owners WHERE id = #{@owner_id}"
+    return Owner.map_item(sql)
+  end
+
+# ---------------------------------------------------------
+  def self.all()
+    sql = "SELECT * FROM adoptions"
+    return Adoption.map_items(sql)
+  end
+
+# ---------------------------------------------------------
+  def self.delete_all()
+    sql = "DELETE FROM adoptions"
+    SqlRunner.run(sql)
+  end
+
+# ---------------------------------------------------------
+  def self.map_items(sql)
+    adoptions = SqlRunner.run(sql)
+    result = adoptions.map { |adoption| Adoption.new( adoption ) }
+    return result
+  end
+
+# ---------------------------------------------------------
+  def self.map_item(sql)
+    result = Adoption.map_items(sql)
+    return result.first
+  end
+
 end # --- Adoption class end -------------------------------
