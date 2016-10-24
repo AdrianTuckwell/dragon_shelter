@@ -18,13 +18,13 @@ class Adoption
   end
 
 # ---------------------------------------------------------
-  def adoption()
-    sql = "SELECT * FROM adoptions WHERE id = #{@dragon_id}"
+  def dragon()
+    sql = "SELECT * FROM dragons WHERE id = #{@dragon_id}"
     return Dragon.map_item(sql)
   end
 
 # ---------------------------------------------------------
-  def Owner()
+  def owner()
     sql = "SELECT * FROM owners WHERE id = #{@owner_id}"
     return Owner.map_item(sql)
   end

@@ -1,6 +1,6 @@
 <div>
   <% @adoptions.each do |adoption| %>
-  Dragon: <%= adoption.dragon.name  %> - Adopted by: <%= adoption.owner.name  %><br><hr>
+  <%= adoption.dragon.name  %> - adopted by: <%= adoption.owner.name  %><br><hr>
   <% end %>
 
 </div>
