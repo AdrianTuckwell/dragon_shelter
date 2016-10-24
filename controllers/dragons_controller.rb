@@ -27,12 +27,18 @@ end
 
 #edit
 get '/dragons/:id/edit' do
+  @dragon = Dragon.find(params[:id])
+  erb(:'dragons/edit')
 end
 
 #update
-post '/dragons/:id' do
+put '/dragons/:id' do
+  @dragon = Dragon.update(params)
+  redirect to("/dragons/#{params[:id]}")
 end
 
 #delete
-delete '/dragons' do
+delete '/dragons/:id' do
+  Dragon.destroy(params[:id])
+  redirect to("/dragons")
 end

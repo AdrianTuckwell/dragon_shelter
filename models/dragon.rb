@@ -47,4 +47,18 @@ class Dragon
     result = Dragon.map_items(sql)
     return result.first
   end
+
+# ---------------------------------------------------------
+  def self.update( options )
+    sql = "UPDATE dragons SET
+          name='#{options['name']}'
+          WHERE id='#{options['id']}'"
+    SqlRunner.run( sql )
+  end
+
+# ---------------------------------------------------------
+  def self.destroy(id)
+    sql = "DELETE FROM dragons WHERE id=#{id}"
+    SqlRunner.run( sql )
+  end
 end # --- Dragon Class end --------------------------------

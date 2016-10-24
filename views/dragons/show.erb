@@ -2,3 +2,11 @@
   <h1><%= @dragon.name %></h1>
   <h2> - <%= @dragon.type %></h2>
 </div>
+
+
+<a href="/dragons/<%= @dragon.id %>/edit">Edit</a>
+
+<form action="/dragons/<%= @dragon.id %>" method="post">
+<input type="submit" value="delete"/>
+<input name="_method" type="hidden" value="delete"/>
+</form>

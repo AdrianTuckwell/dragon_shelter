@@ -48,4 +48,17 @@ class Owner
     return result.first
   end
 
+# ---------------------------------------------------------
+  def self.update( options )
+    sql = "UPDATE owners SET
+          name='#{options['name']}'
+          WHERE id='#{options['id']}'"
+    SqlRunner.run( sql )
+  end
+
+# ---------------------------------------------------------
+  def self.destroy(id)
+    sql = "DELETE FROM owners WHERE id=#{id}"
+    SqlRunner.run( sql )
+  end
 end # --- Owner class end ---------------------------------

@@ -1,0 +1,10 @@
+<h1>Edit Dragon</h1>
+
+<form action="/dragons/<%= @dragon.id %>" method="post">
+  <label for="name">Name:</label>
+  <input type="text" name="name" value="<%= @dragon.name %>">
+
+  <input type="hidden" name="_method" value="put">  
+  <!-- this is to recognise the put request - _method  -->
+  <input type='submit' value="Edit Dragon">
+</form>

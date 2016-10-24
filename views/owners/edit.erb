@@ -1,0 +1,10 @@
+<h1>Edit Owner</h1>
+
+<form action="/owners/<%= @owner.id %>" method="post">
+  <label for="name">Name:</label>
+  <input type="text" name="name" value="<%= @owner.name %>">
+
+  <input type="hidden" name="_method" value="put">  
+  <!-- this is to recognise the put request - _method  -->
+  <input type='submit' value="Edit Owner">
+</form>
