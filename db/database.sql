@@ -1,20 +1,23 @@
+DROP TABLE adoptions;
 DROP TABLE owners;
 DROP TABLE dragons;
-DROP TABLE shelters;
+
 
 CREATE TABLE owners (
   id serial4 PRIMARY KEY,
-  name VARCHAR(255)
+  name VARCHAR(255),
+  address VARCHAR(255)
 );
 
 CREATE TABLE dragons (
   id serial4 PRIMARY KEY,
   name VARCHAR(255),
+  type VARCHAR(255),
   dragon_id int4 REFERENCES dragons(id)
 );
 
-CREATE TABLE shelters (
+CREATE TABLE adoptions (
   id serial4 PRIMARY KEY,
-  owner_id int4 references owners(id) ON DELETE CASCADE,
-  dragon_id int4 references dragons(id) ON DELETE CASCADE
+  owner_id int4 REFERENCES owners(id) ON DELETE CASCADE,
+  dragon_id int4 REFERENCES dragons(id) ON DELETE CASCADE
 );
