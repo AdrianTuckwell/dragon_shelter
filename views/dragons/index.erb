@@ -1,6 +1,16 @@
 <div>
   <% @dragons.each do |dragon| %>
-  <a href="/dragons/<%= dragon.id  %>"><%= dragon.name %></a>  - <%= dragon.type %><br><hr>
+  <a href="/dragons/<%= dragon.id  %>">
+
+  Name: <%= dragon.name %></a><br>
+  Type: <%= dragon.type %><br>
+  Admission Date: <%= dragon.admission_date %><br>
+  Adoption Date: <%= dragon.adoption_date %><br>
+  Trained: <%= dragon.trained %><br>
+  Trained Date: <%= dragon.trained_date %><br>
+  
+
+  <br><hr>
   <% end %>
 
   <a href="/dragons/new">Add new dragon</a><br>

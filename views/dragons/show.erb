@@ -1,7 +1,12 @@
 <div>
-  <h1><%= @dragon.name %></h1>
-  <h2> - <%= @dragon.type %></h2>
+  Name: <%= @dragon.name %> <br>
+  Type: <%= @dragon.type %><br>
+  Admission Date: <%= @dragon.admission_date %><br>
+  Adoption Date: <%= @dragon.adoption_date %><br>
+  Trained: <%= @dragon.trained %><br>
+  Trained Date: <%= @dragon.trained_date %><br>
 </div>
+<br>
 
 
 <a href="/dragons/<%= @dragon.id %>/edit">Edit</a>

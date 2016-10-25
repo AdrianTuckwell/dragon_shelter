@@ -2,17 +2,35 @@ require_relative('../db/sql_runner')
 
 class Dragon
 
-  attr_reader :id, :name, :type
+  attr_reader :id, :name, :type, :trained, :admission_date, :trained_date, 
+              :adoption_date
 
   def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
     @type = options['type']
+    @trained = options['trained']
+    @admission_date = options['admission_date']
+    @trained_date = options['trained_date']
+    @adoption_date = options['adoption_date']
   end
 
 # ---------------------------------------------------------
   def save()
-    sql = "INSERT INTO dragons (name, type) VALUES ('#{@name}', '#{@type}') RETURNING *"
+    sql = "INSERT INTO dragons ( name, 
+                                 type, 
+                                 trained,
+                                 admission_date,
+                                 trained_date,
+                                 adoption_date) VALUES
+
+                                ('#{@name}',
+                                 '#{@type}',
+                                 '#{@trained}', 
+                                 '#{admission_date}',
+                                 '#{trained_date}',
+                                 '#{adoption_date}') RETURNING *"
+
     dragon = SqlRunner.run(sql).first
     @id = dragon['id'].to_i
   end
@@ -51,7 +69,14 @@ class Dragon
 # ---------------------------------------------------------
   def self.update( options )
     sql = "UPDATE dragons SET
-          name='#{options['name']}'
+
+          name    =  '#{options['name']}',
+          type    =  '#{options['type']}',
+          trained =  '#{options['trained']}',
+          admission_date =  '#{options['admission_date']}',
+          trained_date =  '#{options['trained_date']}',
+          adoption_date =  '#{options['adoption_date']}'
+
           WHERE id='#{options['id']}'"
     SqlRunner.run( sql )
   end

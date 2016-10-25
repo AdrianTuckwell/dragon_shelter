@@ -1,5 +1,5 @@
 footer {
-  background-color: lightgrey;
+  background-color: lightblue;
   padding: 10px;
   text-align: center;
 }
@@ -8,6 +8,7 @@ footer {
   color: blue;
   line-height: 65px;
   margin-left: 20px;
+  font-family: Verdana;
   font-size: 20px;
   font-weight: 600;
 }

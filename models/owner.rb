@@ -51,7 +51,8 @@ class Owner
 # ---------------------------------------------------------
   def self.update( options )
     sql = "UPDATE owners SET
-          name='#{options['name']}'
+          name='#{options['name']}',
+          address='#{options['address']}'
           WHERE id='#{options['id']}'"
     SqlRunner.run( sql )
   end
