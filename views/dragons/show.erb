@@ -1,3 +1,5 @@
+<a href="/dragons/<%= @dragon.id %>/edit">Edit</a> - <a href="/dragons">Return</a> <br>
+
 <div>
   Name: <%= @dragon.name %> <br>
   Type: <%= @dragon.type %><br>
@@ -7,12 +9,14 @@
   Trained: <%= @dragon.trained %><br>
   Trained Date: <%= @dragon.trained_date %><br>
 </div>
+<center><img src="/images/<%=@dragon.type%>.png" alt="Cover" height="400" width="400"></center>
+
 <br>
-
-
-<a href="/dragons/<%= @dragon.id %>/edit">Edit</a>
 
 <form action="/dragons/<%= @dragon.id %>" method="post">
 <input type="submit" value="delete"/>
 <input name="_method" type="hidden" value="delete"/>
 </form>
+
+
+

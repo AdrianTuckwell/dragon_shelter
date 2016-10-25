@@ -1,7 +1,12 @@
 <div>
   <a href="/owners/new">Add New Owner</a><br><br>
   <% @owners.each do |owner| %>
-  <a href="/owners/<%= owner.id %>"><%= owner.name %></a>  of  <%= owner.address  %><br><hr>
+  <a href="/owners/<%= owner.id %>"><%= owner.name %></a>  of  <%= owner.address  %><br>
+  <img src="/images/<%=owner.name%>.png" alt="Cover" height="250" width="150">
+
+
+
+  <hr>
   <% end %>
 
   
