@@ -3,13 +3,14 @@ require_relative('../db/sql_runner')
 class Dragon
 
   attr_reader :id, :name, :type, :trained, :admission_date, :trained_date, 
-              :adoption_date
+              :adopted, :adoption_date
 
   def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
     @type = options['type']
     @trained = options['trained']
+    @adopted = options['adopted']
     @admission_date = options['admission_date']
     @trained_date = options['trained_date']
     @adoption_date = options['adoption_date']
@@ -20,6 +21,7 @@ class Dragon
     sql = "INSERT INTO dragons ( name, 
                                  type, 
                                  trained,
+                                 adopted,
                                  admission_date,
                                  trained_date,
                                  adoption_date) VALUES
@@ -27,6 +29,7 @@ class Dragon
                                 ('#{@name}',
                                  '#{@type}',
                                  '#{@trained}', 
+                                 '#{@adopted}', 
                                  '#{admission_date}',
                                  '#{trained_date}',
                                  '#{adoption_date}') RETURNING *"
@@ -44,6 +47,12 @@ class Dragon
 # ---------------------------------------------------------
   def self.adoptable()
     sql = "SELECT * FROM dragons WHERE trained = TRUE"
+    return Dragon.map_items(sql)
+  end
+
+# ---------------------------------------------------------
+  def self.adopted()
+    sql = "SELECT * FROM dragons WHERE adopted = TRUE"
     return Dragon.map_items(sql)
   end
 
@@ -79,9 +88,10 @@ class Dragon
           name    =  '#{options['name']}',
           type    =  '#{options['type']}',
           trained =  '#{options['trained']}',
+          adopted =  '#{options['adopted']}',
           admission_date =  '#{options['admission_date']}',
-          trained_date =  '#{options['trained_date']}',
-          adoption_date =  '#{options['adoption_date']}'
+          trained_date =    '#{options['trained_date']}',
+          adoption_date =   '#{options['adoption_date']}'
 
           WHERE id='#{options['id']}'"
     SqlRunner.run( sql )
