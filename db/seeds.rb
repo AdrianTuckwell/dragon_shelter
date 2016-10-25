@@ -65,7 +65,7 @@ dragon7 = Dragon.new({ 'name' => 'Dark Dave',
                        'adoption_date' => '25-oct-2016'})
 
 dragon8 = Dragon.new({ 'name' => 'Night Fury', 
-                       'type' => 'Seadragonus Giganticus Maximus (Red Death)', 
+                       'type' => 'Seadragonus Giganticus Maximus', 
                        'trained' => 'FALSE', 
                        'adopted' => 'FALSE', 
                        'admission_date' => '25-oct-2016',                       
