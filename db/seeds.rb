@@ -8,16 +8,77 @@ Dragon.delete_all()
 Owner.delete_all()
 
 # --- Create dragons -------------------------------------
-dragon1 = Dragon.new({ 'name' => 'Toothless', 'type' => 'Night Fury', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
-dragon2 = Dragon.new({ 'name' => 'Big Red', 'type' => 'Changewing', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
-dragon3 = Dragon.new({ 'name' => 'Paradice', 'type' => 'Deadly Nadder', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
-dragon4 = Dragon.new({ 'name' => 'Sunshine', 'type' => 'Giant Bee-Eater', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
-dragon5 = Dragon.new({ 'name' => 'Rainbow', 'type' => 'Gronckle', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
-dragon6 = Dragon.new({ 'name' => 'Pheonix', 'type' => 'Hideous Zippleback', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
-dragon7 = Dragon.new({ 'name' => 'Dark Dave', 'type' => 'Monstrous Nightmare', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
-dragon8 = Dragon.new({ 'name' => 'Night Fury', 'type' => 'Seadragonus Giganticus Maximus (Red Death)', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
-dragon9 = Dragon.new({ 'name' => 'Carsten', 'type' => 'Terrible Terror', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
-dragon10 = Dragon.new({ 'name' => 'Slurge', 'type' => 'Thunder Drum', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
+dragon1 = Dragon.new({ 'name' => 'Toothless', 
+                       'type' => 'Night Fury', 
+                       'trained' => 'FALSE', 
+                       'admission_date' => '25-oct-2016',                       
+                       'trained_date' => '25-oct-2016',
+                       'adoption_date' => '25-oct-2016'})
+
+dragon2 = Dragon.new({ 'name' => 'Big Red', 
+                       'type' => 'Changewing', 
+                       'trained' => 'FALSE', 
+                       'admission_date' => '25-oct-2016',                       
+                       'trained_date' => '25-oct-2016',
+                       'adoption_date' => '25-oct-2016'})
+
+dragon3 = Dragon.new({ 'name' => 'Paradice', 
+                       'type' => 'Deadly Nadder', 
+                       'trained' => 'FALSE', 
+                       'admission_date' => '25-oct-2016',                       
+                       'trained_date' => '25-oct-2016',
+                       'adoption_date' => '25-oct-2016'})
+
+dragon4 = Dragon.new({ 'name' => 'Sunshine', 
+                       'type' => 'Giant Bee-Eater', 
+                       'trained' => 'FALSE', 
+                       'admission_date' => '25-oct-2016',                       
+                       'trained_date' => '25-oct-2016',
+                       'adoption_date' => '25-oct-2016'})
+
+dragon5 = Dragon.new({ 'name' => 'Rainbow', 
+                       'type' => 'Gronckle', 
+                       'trained' => 'FALSE', 
+                       'admission_date' => '25-oct-2016',                       
+                       'trained_date' => '25-oct-2016',
+                       'adoption_date' => '25-oct-2016'})
+
+dragon6 = Dragon.new({ 'name' => 'Pheonix', 
+                       'type' => 'Hideous Zippleback', 
+                       'trained' => 'FALSE', 
+                       'admission_date' => '25-oct-2016',                       
+                       'trained_date' => '25-oct-2016',
+                       'adoption_date' => '25-oct-2016'})
+
+dragon7 = Dragon.new({ 'name' => 'Dark Dave', 
+                       'type' => 'Monstrous Nightmare', 
+                       'trained' => 'FALSE', 
+                       'admission_date' => '25-oct-2016',                       
+                       'trained_date' => '25-oct-2016',
+                       'adoption_date' => '25-oct-2016'})
+
+dragon8 = Dragon.new({ 'name' => 'Night Fury', 
+                       'type' => 'Seadragonus Giganticus Maximus (Red Death)', 
+                       'trained' => 'FALSE', 
+                       'admission_date' => '25-oct-2016',                       
+                       'trained_date' => '25-oct-2016',
+                       'adoption_date' => '25-oct-2016'})
+
+
+dragon9 = Dragon.new({ 'name' => 'Carsten', 
+                       'type' => 'Terrible Terror', 
+                       'trained' => 'FALSE', 
+                       'admission_date' => '25-oct-2016',                       
+                       'trained_date' => '25-oct-2016',
+                       'adoption_date' => '25-oct-2016'})
+
+dragon10 = Dragon.new({ 'name' => 'Slurge', 
+                        'type' => 'Thunder Drum', 
+                        'trained' => 'FALSE', 
+                        'admission_date' => '25-oct-2016',                       
+                        'trained_date' => '25-oct-2016',
+                        'adoption_date' => '25-oct-2016'})
+
 
 dragon1.save
 dragon2.save
@@ -31,16 +92,35 @@ dragon9.save
 dragon10.save
 
 # --- Create owners -------------------------------------
-owner1 = Owner.new({ 'name' => 'Hiccup', 'address' => 'Isle of Berk'})
-owner2 = Owner.new({ 'name' => 'Astrid Hofferson', 'address' => 'Dragon Island'})
-owner3 = Owner.new({ 'name' => 'Snotlout Jorgenson', 'address' => 'Dragon Island'})
-owner4 = Owner.new({ 'name' => 'Stoick the Vast', 'address' => 'Botany Blight'})
-owner5 = Owner.new({ 'name' => 'Ruffnut Thorston', 'address' => 'Screaming Death Island'})
-owner6 = Owner.new({ 'name' => 'Tuffnut Thorston', 'address' => 'Sea Stacks'})
-owner7 = Owner.new({ 'name' => 'Fishlegs Ingerman', 'address' => 'Dragon Island'})
-owner8 = Owner.new({ 'name' => 'Gobber', 'address' => 'Fireworm Island'})
-owner9 = Owner.new({ 'name' => 'Spitelout Jorgenson', 'address' => 'Fireworm Island'})
-owner10 = Owner.new({ 'name' => 'Phlegma the Fierce', 'address' => 'Dragon Island'})
+owner1 = Owner.new({ 'name' => 'Hiccup', 
+                     'address' => 'Isle of Berk'})
+
+owner2 = Owner.new({ 'name' => 'Astrid Hofferson', 
+                     'address' => 'Dragon Island'})
+
+owner3 = Owner.new({ 'name' => 'Snotlout Jorgenson', 
+                     'address' => 'Dragon Island'})
+
+owner4 = Owner.new({ 'name' => 'Stoick the Vast', 
+                     'address' => 'Botany Blight'})
+
+owner5 = Owner.new({ 'name' => 'Ruffnut Thorston', 
+                     'address' => 'Screaming Death Island'})
+
+owner6 = Owner.new({ 'name' => 'Tuffnut Thorston', 
+                     'address' => 'Sea Stacks'})
+
+owner7 = Owner.new({ 'name' => 'Fishlegs Ingerman', 
+                     'address' => 'Dragon Island'})
+
+owner8 = Owner.new({ 'name' => 'Gobber', 
+                     'address' => 'Fireworm Island'})
+
+owner9 = Owner.new({ 'name' => 'Spitelout Jorgenson',
+                     'address' => 'Fireworm Island'})
+
+owner10 = Owner.new({ 'name' => 'Phlegma the Fierce', 
+                      'address' => 'Dragon Island'})
 
 owner1.save
 owner2.save
