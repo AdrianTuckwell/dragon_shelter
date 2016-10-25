@@ -13,6 +13,10 @@ CREATE TABLE dragons (
   id serial4 PRIMARY KEY,
   name VARCHAR(255),
   type VARCHAR(255),
+  trained BOOLEAN DEFAULT FALSE,
+  admission_date DATE,
+  trained_date DATE,
+  adoption_date DATE,
   dragon_id int4 REFERENCES dragons(id)
 );
 

@@ -8,16 +8,16 @@ Dragon.delete_all()
 Owner.delete_all()
 
 # --- Create dragons -------------------------------------
-dragon1 = Dragon.new({ 'name' => 'Toothless', 'type' => 'Night Fury'})
-dragon2 = Dragon.new({ 'name' => 'Big Red', 'type' => 'Changewing'})
-dragon3 = Dragon.new({ 'name' => 'Paradice', 'type' => 'Deadly Nadder'})
-dragon4 = Dragon.new({ 'name' => 'Sunshine', 'type' => 'Giant Bee-Eater'})
-dragon5 = Dragon.new({ 'name' => 'Rainbow', 'type' => 'Gronckle'})
-dragon6 = Dragon.new({ 'name' => 'Pheonix', 'type' => 'Hideous Zippleback'})
-dragon7 = Dragon.new({ 'name' => 'Dark Dave', 'type' => 'Monstrous Nightmare'})
-dragon8 = Dragon.new({ 'name' => 'Night Fury', 'type' => 'Seadragonus Giganticus Maximus (Red Death)'})
-dragon9 = Dragon.new({ 'name' => 'Carsten', 'type' => 'Terrible Terror'})
-dragon10 = Dragon.new({ 'name' => 'Slurge', 'type' => 'Thunder Drum'})
+dragon1 = Dragon.new({ 'name' => 'Toothless', 'type' => 'Night Fury', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
+dragon2 = Dragon.new({ 'name' => 'Big Red', 'type' => 'Changewing', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
+dragon3 = Dragon.new({ 'name' => 'Paradice', 'type' => 'Deadly Nadder', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
+dragon4 = Dragon.new({ 'name' => 'Sunshine', 'type' => 'Giant Bee-Eater', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
+dragon5 = Dragon.new({ 'name' => 'Rainbow', 'type' => 'Gronckle', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
+dragon6 = Dragon.new({ 'name' => 'Pheonix', 'type' => 'Hideous Zippleback', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
+dragon7 = Dragon.new({ 'name' => 'Dark Dave', 'type' => 'Monstrous Nightmare', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
+dragon8 = Dragon.new({ 'name' => 'Night Fury', 'type' => 'Seadragonus Giganticus Maximus (Red Death)', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
+dragon9 = Dragon.new({ 'name' => 'Carsten', 'type' => 'Terrible Terror', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
+dragon10 = Dragon.new({ 'name' => 'Slurge', 'type' => 'Thunder Drum', 'trained' => 'FALSE', 'admission_date' => '25-oct-2016'})
 
 dragon1.save
 dragon2.save
