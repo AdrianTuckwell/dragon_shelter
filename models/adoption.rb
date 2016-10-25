@@ -35,6 +35,7 @@ class Adoption
     return Adoption.map_items(sql)
   end
 
+
 # ---------------------------------------------------------
   def self.delete_all()
     sql = "DELETE FROM adoptions"

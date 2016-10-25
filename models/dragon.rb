@@ -42,6 +42,12 @@ class Dragon
   end
 
 # ---------------------------------------------------------
+  def self.adoptable()
+    sql = "SELECT * FROM dragons WHERE trained = TRUE"
+    return Dragon.map_items(sql)
+  end
+
+# ---------------------------------------------------------
   def self.find(id)
     sql = "SELECT * FROM dragons WHERE id = #{id}"
     return Dragon.map_item(sql)

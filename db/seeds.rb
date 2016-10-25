@@ -10,21 +10,21 @@ Owner.delete_all()
 # --- Create dragons -------------------------------------
 dragon1 = Dragon.new({ 'name' => 'Toothless', 
                        'type' => 'Night Fury', 
-                       'trained' => 'FALSE', 
+                       'trained' => 'TRUE', 
                        'admission_date' => '25-oct-2016',                       
                        'trained_date' => '25-oct-2016',
                        'adoption_date' => '25-oct-2016'})
 
 dragon2 = Dragon.new({ 'name' => 'Big Red', 
                        'type' => 'Changewing', 
-                       'trained' => 'FALSE', 
+                       'trained' => 'TRUE', 
                        'admission_date' => '25-oct-2016',                       
                        'trained_date' => '25-oct-2016',
                        'adoption_date' => '25-oct-2016'})
 
 dragon3 = Dragon.new({ 'name' => 'Paradice', 
                        'type' => 'Deadly Nadder', 
-                       'trained' => 'FALSE', 
+                       'trained' => 'TRUE', 
                        'admission_date' => '25-oct-2016',                       
                        'trained_date' => '25-oct-2016',
                        'adoption_date' => '25-oct-2016'})

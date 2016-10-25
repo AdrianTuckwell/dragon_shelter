@@ -1,6 +1,8 @@
 <div>
+  <a href="/adoptions/new">Adopt a Dragon</a><br><br>
+
+
   <% @adoptions.each do |adoption| %>
   <%= adoption.dragon.name  %> - adopted by: <%= adoption.owner.name  %><br><hr>
   <% end %>
-
 </div>

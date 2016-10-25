@@ -7,6 +7,11 @@ get '/dragons' do
   erb(:'dragons/index')
 end
 
+get '/dragons/adoptable' do
+  @dragons = Dragon.adoptable
+  erb(:'dragons/adoptable')
+end
+
 #new
 get '/dragons/new' do
   erb(:'dragons/new')
