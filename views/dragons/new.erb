@@ -5,8 +5,15 @@ Add Dragon:
   <label for="name">Name:</label>
   <input type="text" name="name"><br>
 
-  <label for="type">Type:</label>
-  <input type="text" name="type"><br>
+
+  <!-- Dragon select list -->
+  <label for="dragon_id">Type:</label>
+  <select name="type" id="type">
+    <% @dragons.each do |dragon| %>
+      <option value="<%= dragon.type %>"><%= dragon.type %></option>
+    <% end %>
+  </select>
+  <br>
 
   <label for="trained">Trained:</label>
   <input type="text" name="trained"><br>

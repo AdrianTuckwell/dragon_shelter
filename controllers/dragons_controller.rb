@@ -19,6 +19,7 @@ end
 
 #new
 get '/dragons/new' do
+  @dragons = Dragon.all
   erb(:'dragons/new')
 end
 
