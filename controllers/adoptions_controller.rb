@@ -24,3 +24,9 @@ post '/adoptions' do
   @adoption.save
   erb :'adoptions/create'
 end
+
+#delete -------------------------------------------------------------
+delete '/adoptions/:id' do
+  Adoption.destroy(params[:id])
+  redirect to("/adoptions")
+end

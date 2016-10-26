@@ -1,13 +1,16 @@
 <div>
   <a href="/adoptions/new">Adopt a Dragon</a><br><br>
-<center>
-  <% @adoptions.each do |adoption| %>
-  <img src="/images/<%=adoption.dragon.type%>.png" alt="Cover" height="200" width="150">
-  <%= adoption.dragon.name  %> - adopted by: <%= adoption.owner.name  %>
-  <img src="/images/<%=adoption.owner.name%>.png" alt="Cover" height="200" width="150">
- 
-  <hr>
-
-  <% end %>
-  </center>
-</div>
+  <center>
+    <a>
+    <hr>
+      <% @adoptions.each do |adoption| %>
+      <img src="/images/<%=adoption.dragon.type%>.png" alt="Cover" height="200" width="150">
+      <a>
+        <%= adoption.dragon.name  %> - adopted by: <%= adoption.owner.name  %>
+        <a/>
+        <img src="/images/<%=adoption.owner.name%>.png" alt="Cover" height="200" width="150">
+        <a href="/adoptions/<%= adoption.id %>">Delete Adoption</a> 
+        <hr>
+        <% end %>
+      </center>
+    </div>

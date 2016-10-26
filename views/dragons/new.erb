@@ -1,39 +1,40 @@
-Add Dragon:
+<a>
+  Add Dragon:
 
-<form action="/dragons" method="post">
+  <form action="/dragons" method="post">
 
-  <label for="name">Name:</label>
-  <input type="text" name="name"><br>
+    <label for="name">Name:</label>
+    <input type="text" name="name"><br>
 
 
-  <!-- Dragon select list -->
-  <label for="dragon_id">Type:</label>
-  <select name="type" id="type">
-    <% @dragons.each do |dragon| %>
+    <!-- Dragon select list -->
+    <label for="dragon_id">Type:</label>
+    <select name="type" id="type">
+      <% @dragons.each do |dragon| %>
       <option value="<%= dragon.type %>"><%= dragon.type %></option>
-    <% end %>
-  </select>
-  <br>
+      <% end %>
+    </select>
+    <br>
 
-  <label for="trained">Trained:</label>
-  <input type="text" name="trained"><br>
+    <label for="trained">Trained :</label>
+    <input type="text" name="trained"><br>
 
-  <label for="admission_date">Admission Date:</label>
-  <input type="date" name="admission_date" value="1066-01-01"><br>
+    <label for="admission_date">Admission Date :</label>
+    <input type="date" name="admission_date" value="1066-01-01"><br>
 
-  <label for="trained_date">Trained Date:</label>
-  <input type="date" name="trained_date" value="1066-01-01"><br>
+    <label for="trained_date">Trained Date :</label>
+    <input type="date" name="trained_date" value="1066-01-01"><br>
 
-  <label for="adopted">Adopted:</label>
-  <input type="text" name="adopted"><br>
+    <label for="adopted">Adopted :</label>
+    <input type="text" name="adopted"><br>
 
-  <label for="adoption_date">Adoption Date:</label>
-  <input type="date" name="adoption_date" value="1066-01-01"><br>
+    <label for="adoption_date">Adoption Date :</label>
+    <input type="date" name="adoption_date" value="1066-01-01"><br>
 
-  <input type='submit' value="Add Dragon">
-</form>
-
+    <input type='submit' value="Add Dragon">
+  </form>
+</a>
 
 <br>
 <br>
-<a href="/">Back</a>
+<a href="/dragons">Return</a>

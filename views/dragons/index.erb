@@ -1,21 +1,28 @@
+  
 <div>
+  <br>
+  <br>
+
   <a href="/dragons/new">Add new dragon</a> - <a href="/dragons/adoptable">Filter adoptable dragons</a> - <a href="/dragons/adopted">Filter adopted dragons</a><br><br>
 
   <% @dragons.each do |dragon| %>
-  <a href="/dragons/<%= dragon.id  %>">
-
-  Name: <%= dragon.name %></a><br>
-  Type: <%= dragon.type %><br>
-  Admission Date: <%= dragon.admission_date %><br>
-  Adopted: <%= dragon.adopted %><br>
-  Adoption Date: <%= dragon.adoption_date %><br>
-  Trained: <%= dragon.trained %><br>
-  Trained Date: <%= dragon.trained_date %><br>
-  <img src="/images/<%=dragon.type%>.png" alt="Cover" height="200" width="200">
+  <a href="/dragons/<%= dragon.id  %>"> Dragon Id : <%= dragon.id %></a><br>
+  
+  <a>
+    Name : <%= dragon.name %><br>
+    Type : <%= dragon.type %><br>
+    Admission Date : <%= dragon.admission_date %><br>
+    Adopted : <%= dragon.adopted %><br>
+    Adoption Date : <%= dragon.adoption_date %><br>
+    Trained : <%= dragon.trained %><br>
+    Trained Date: <%= dragon.trained_date %><br>
+    <img src="/images/<%=dragon.type%>.png" alt="Cover" height="200" width="200">  
     <br>
-
+  </a>
   <br><hr>
   <% end %>
 
-  
+
+</div>
+</div>
 </div>

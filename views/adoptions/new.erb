@@ -1,9 +1,11 @@
-New adoption:
+<a>New adoption:</a><br><br>
+
+<a href="/adoptions">Return</a><br><br>
 
 <form action="/adoptions" method="post">
-
+<a>
   <!-- Dragon select list -->
-  <label for="dragon_id">Dragon:</label>
+  <label for="dragon_id">Dragon :</label>
   <select name="dragon_id" id="dragon_id">
     <% @dragons.each do |dragon| %>
       <option value="<%= dragon.id %>"><%= dragon.name %></option>
@@ -13,7 +15,7 @@ New adoption:
   <br>  
 
   <!-- Owners select list -->
-  <label for="owner_id">Owner:</label>
+  <label for="owner_id">Owner :</label>
   <select name="owner_id" id="owner_id">
     <% @owners.each do |owner| %>
       <option value="<%= owner.id %>"><%= owner.name %></option>
@@ -22,4 +24,5 @@ New adoption:
   <br>
   <br>
   <input type="submit" value="Adopt dragon"></input>
+<a/>
 </form>

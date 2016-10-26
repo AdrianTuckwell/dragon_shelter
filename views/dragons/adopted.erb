@@ -1,9 +1,10 @@
 <div>
-    <a href="/dragons">return</a><br><br>
+  <a href="/dragons">Return</a><br><br>
+  <a>
+    Adopted dragons: <br><br>
 
-  Adopted dragons: <br><br>
-
-  <% @dragons.each do |dragon| %>
+    <% @dragons.each do |dragon| %>
     <%= dragon.name  %> <br><hr>
-  <% end %>
+    <% end %>
+  </a>
 </div>
