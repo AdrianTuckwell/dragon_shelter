@@ -25,6 +25,14 @@ post '/adoptions' do
   erb :'adoptions/create'
 end
 
+#show
+get '/adoptions/:id' do
+  @adoption = Adoption.find(params['id'])
+  
+  erb(:'adoptions/show')
+end
+
+
 #delete -------------------------------------------------------------
 delete '/adoptions/:id' do
   Adoption.destroy(params[:id])

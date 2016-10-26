@@ -3,10 +3,10 @@
     <a href="/owners/new">Add New Owner</a><br><br>
     <% @owners.each do |owner| %>
     <div class="clearfix float-my-children">
-
-    <a href="/owners/<%= owner.id %>"><%= owner.name %></a>  <a>of</a>  <a><%= owner.address  %></a><br>
-    <img src="/images/<%=owner.name%>.png" alt="Cover" height="250" width="150">
-    <hr>
+      <img src="/images/<%=owner.name%>.png" alt="Cover" height="250" width="150">
+      <a href="/owners/<%= owner.id %>"><%= owner.name %></a>  <a>of</a>  <a><%= owner.address  %></a><br>
+      
+      <hr>
     </div>
     <% end %>
   </a>

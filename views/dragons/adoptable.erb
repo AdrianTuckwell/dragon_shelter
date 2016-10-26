@@ -1,11 +1,12 @@
 <div>
-
-  <a href="/dragons">Return</a><br><br>
+  <a>Trained and Adoptable dragons :</a> - <a href="/dragons">Return</a><br><br>
   <a>
-    Trained and Adoptable dragons : <br><br>
-
+   
     <% @dragons.each do |dragon| %>
-    <%= dragon.name  %> <br><hr>
+   <div class="clearfix float-my-children">
+   <img src="/images/<%=dragon.type%>.png" alt="Cover" height="200" width="200"> 
+    <%= dragon.name  %>
+    </div>
     <% end %>
   </a>
 </div>

@@ -1,11 +1,10 @@
 <a href="/adoptions">Return</a><br>
 
 <img src="/images/<%=@adoption.dragon.type%>.png" alt="Cover" height="200" width="150">
-<%= @adoption.dragon.name %> has been adopted by <%= @adoption.owner.name %>
+<a><%= @adoption.dragon.name %> has been adopted by <%= @adoption.owner.name %></a>
 <img src="/images/<%=@adoption.owner.name%>.png" alt="Cover" height="200" width="150">
 <br>
 <br>
-
 
 <form action="/adoptions/<%= @adoption.id %>" method="post">
 <input type="submit" value="delete"/>

@@ -14,6 +14,7 @@ class Adoption
   def save()
     sql = "INSERT INTO adoptions (dragon_id, owner_id) VALUES (#{@dragon_id}, #{@owner_id}) RETURNING *"
     owner = SqlRunner.run(sql).first
+    @dragon = Dragon.adopt_true(@dragon_id)
     @id = owner['id']
   end
 
@@ -40,6 +41,12 @@ class Adoption
     return Adoption.all.count
   end
 
+  # ---------------------------------------------------------
+    def self.find(id)
+      sql = "SELECT * FROM adoptions WHERE id = #{id}"
+      return Adoption.map_item(sql)
+    end
+
 # ---------------------------------------------------------
   def self.delete_all()
     sql = "DELETE FROM adoptions"
@@ -58,5 +65,11 @@ class Adoption
     result = Adoption.map_items(sql)
     return result.first
   end
+
+  # ---------------------------------------------------------
+    def self.destroy(id)
+      sql = "DELETE FROM adoptions WHERE id=#{id}"
+      SqlRunner.run( sql )
+    end
 
 end # --- Adoption class end -------------------------------
