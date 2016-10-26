@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Adoption
 
-  attr_reader :id, :dragon_id, :owner_id
+  attr_reader :id, :dragon_id, :owner_id, :total
 
   def initialize( options )
     @id = options['id'].to_i
@@ -35,6 +35,10 @@ class Adoption
     return Adoption.map_items(sql)
   end
 
+# ---------------------------------------------------------
+  def self.total()
+    return Adoption.all.count
+  end
 
 # ---------------------------------------------------------
   def self.delete_all()

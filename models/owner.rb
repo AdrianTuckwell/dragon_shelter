@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Owner
 
-  attr_reader :id, :name, :address
+  attr_reader :id, :name, :address, :total
 
   def initialize( options )
     @id = options['id'].to_i
@@ -21,6 +21,11 @@ class Owner
   def self.all()
     sql = "SELECT * FROM owners"
     return Owner.map_items(sql)
+  end
+
+# ---------------------------------------------------------
+  def self.total()
+    return Owner.all.count
   end
 
 # ---------------------------------------------------------

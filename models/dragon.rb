@@ -3,7 +3,7 @@ require_relative('../db/sql_runner')
 class Dragon
 
   attr_reader :id, :name, :type, :trained, :admission_date, :trained_date, 
-              :adopted, :adoption_date
+              :adopted, :adoption_date, :total, :total_adoptable, :total_adopted
 
   def initialize(options)
     @id = options['id'].to_i
@@ -45,9 +45,19 @@ class Dragon
   end
 
 # ---------------------------------------------------------
+  def self.total()
+    return Dragon.all.count
+  end
+
+# ---------------------------------------------------------
   def self.adoptable()
     sql = "SELECT * FROM dragons WHERE trained = TRUE"
     return Dragon.map_items(sql)
+  end
+
+# ---------------------------------------------------------
+  def self.total_adoptable()
+    return Dragon.adoptable.count
   end
 
 # ---------------------------------------------------------
@@ -55,6 +65,12 @@ class Dragon
     sql = "SELECT * FROM dragons WHERE adopted = TRUE"
     return Dragon.map_items(sql)
   end
+
+# ---------------------------------------------------------
+  def self.total_adopted()
+    return Dragon.adopted.count
+  end
+
 
 # ---------------------------------------------------------
   def self.find(id)

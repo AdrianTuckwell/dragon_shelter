@@ -27,6 +27,8 @@ a{
 .date{
   font-family: "Twiddlestix";
   padding: 10px;
+  float: right;
+  margin-right: 0px;
   text-align: right;
   background-color: #717F9A
 }
@@ -38,6 +40,10 @@ a{
   font-family: "Twiddlestix";
   text-align: center;
   background-color: #D7E7EB
+}
+
+.navigation a{
+  text-decoration: none;
 }
 
 /*------------------------------------------------------------------*/
