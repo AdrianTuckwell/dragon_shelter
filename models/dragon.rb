@@ -71,7 +71,6 @@ class Dragon
     return Dragon.adopted.count
   end
 
-
 # ---------------------------------------------------------
   def self.find(id)
     sql = "SELECT * FROM dragons WHERE id = #{id}"
