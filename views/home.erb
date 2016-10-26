@@ -1,8 +1,17 @@
 <div>
   <h2>Welcome to the Scottish Dragon Shelter</h2>
 
-  <a>Total dragons : <%= @number_of_dragons %></a><br> 
-  <a>Total owners : <%= @number_of_owners %></a><br> 
-  <a>Total trained/adoptable dragons : <%= @number_of_adoptable_dragons %></a><br> 
-  <a>Total adopted dragons : <%= @number_of_adopted_dragons %></a><br> <br>
+  <div class="map">
+    <img src="/images/map.png" alt="Cover" height="400" width="400">
+  </div>
+  <div class="data">
+  <p>The dragon shelter was established in 970 ad by Hiccup Horrendous Haddock III. He was an awesome sword-fighter, a dragon-whisperer and the greatest Viking Hero who ever lived. But it wasn't always like that. </p>
+
+    <p> In fact, in the beginning, Hiccup Horrendous Haddock III was the most put upon Viking you'd ever seen. Not loud enough to make himself heard at dinner with his father, Stoick the Vast; not hard enough to beat his chief rival, Snotlout, at Bashyball, the number one school sport and CERTAINLY not stupid enough to go into a cave full of dragons to find a pet... It's time for Hiccup to learn how to be a Hero.</p><br> 
+
+    <a>Total dragons : <%= @number_of_dragons %></a><br> 
+    <a>Total owners : <%= @number_of_owners %></a><br> 
+    <a>Total trained/adoptable dragons : <%= @number_of_adoptable_dragons %></a><br> 
+    <a>Total adopted dragons : <%= @number_of_adopted_dragons %></a><br>
+  </div>
 </div>
