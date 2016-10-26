@@ -51,7 +51,7 @@ class Dragon
 
 # ---------------------------------------------------------
   def self.adoptable()
-    sql = "SELECT * FROM dragons WHERE trained = TRUE"
+    sql = "SELECT * FROM dragons WHERE trained = TRUE and adopted = FALSE"
     return Dragon.map_items(sql)
   end
 

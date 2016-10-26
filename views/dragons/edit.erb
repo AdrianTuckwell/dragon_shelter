@@ -1,37 +1,34 @@
-<br>
-<br>
 <a>Edit Dragon:</a>
 <a href="/dragons">Return</a><br>
 <br>
-<br>
-<form action="/dragons/<%= @dragon.id %>" method="post">
-  <a>Dragon Id: <%= @dragon.id %></a><br>
-  <a>
-  <label for="name">Name :</label>
-    <input type="text" name="name" value="<%= @dragon.name %>">
-    <br>
-    <label for="type">Type :</label>
-    <input type="text" name="type" value="<%= @dragon.type %>">
-    <br>
-    <label for="admission_date">Admission_date :</label>
-    <input type="text" name="admission_date" value="<%= @dragon.admission_date %>">
-    <br>
-    <label for="trained">Trained :</label>
-    <input type="text" name="trained" value="<%= @dragon.trained %>">
-    <br>
-    <label for="trained_date">Trained_date :</label>
-    <input type="text" name="trained_date" value="<%= @dragon.trained_date %>">
-    <br>  
-    <label for="adopted">Adopted :</label>
-    <input type="text" name="adopted" value="<%= @dragon.adopted %>">
-    <br>
-    <label for="adoption_date">Adoption_date :</label>
-    <input type="text" name="adoption_date" value="<%= @dragon.adoption_date %>">
-    <br>
+<div class="clearfix float-my-children">
+  <img src="/images/<%=@dragon.type%>.png" alt="Cover" height="400" width="400">
+  <form action="/dragons/<%= @dragon.id %>" method="post">
+    <a>Dragon Id: <%= @dragon.id %></a><br>
+    <a>
+      <label for="name">Name :</label>
+      <input type="text" name="name" value="<%= @dragon.name %>">
+      <br>
+      <label for="type">Type :</label>
+      <input type="text" name="type" value="<%= @dragon.type %>">
+      <br>
+      <label for="admission_date">Admission_date :</label>
+      <input type="text" name="admission_date" value="<%= @dragon.admission_date %>">
+      <br>
+      <label for="trained">Trained :</label>
+      <input type="text" name="trained" value="<%= @dragon.trained %>">
+      <br>
+      <label for="trained_date">Trained_date :</label>
+      <input type="text" name="trained_date" value="<%= @dragon.trained_date %>">
+      <br>  
+      <label for="adopted">Adopted :</label>
+      <input type="text" name="adopted" value="<%= @dragon.adopted %>">
+      <br>
+      <label for="adoption_date">Adoption_date :</label>
+      <input type="text" name="adoption_date" value="<%= @dragon.adoption_date %>">
+      <br>
 
-  </div>
-  <center><img src="/images/<%=@dragon.type%>.png" alt="Cover" height="400" width="400"></center>
-
+    </div>
   <br>
   <input type="hidden" name="_method" value="put">  
   <!-- this is to recognise the put request - _method  -->

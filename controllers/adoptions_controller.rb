@@ -11,7 +11,7 @@ end
 
 #new ---------------------------------------------------------------
 get '/adoptions/new' do
-  @dragons = Dragon.all()
+  @dragons = Dragon.adoptable()
   @owners = Owner.all()
   erb :'adoptions/new'
 end

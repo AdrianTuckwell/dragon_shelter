@@ -34,7 +34,7 @@ dragon3 = Dragon.new({ 'name' => 'Paradice',
 
 dragon4 = Dragon.new({ 'name' => 'Sunshine', 
                        'type' => 'Giant Bee-Eater', 
-                       'trained' => 'FALSE', 
+                       'trained' => 'TRUE', 
                        'adopted' => 'FALSE', 
                        'admission_date' => '25-oct-2016',                       
                        'trained_date' => '25-oct-2016',
@@ -42,7 +42,7 @@ dragon4 = Dragon.new({ 'name' => 'Sunshine',
 
 dragon5 = Dragon.new({ 'name' => 'Rainbow', 
                        'type' => 'Gronckle', 
-                       'trained' => 'FALSE', 
+                       'trained' => 'TRUE', 
                        'adopted' => 'FALSE', 
                        'admission_date' => '25-oct-2016',                       
                        'trained_date' => '25-oct-2016',
@@ -147,24 +147,24 @@ owner10.save
 adoption1 = Adoption.new({'dragon_id' => dragon1.id, 'owner_id' => owner1.id})
 adoption2 = Adoption.new({'dragon_id' => dragon2.id, 'owner_id' => owner2.id})
 adoption3 = Adoption.new({'dragon_id' => dragon3.id, 'owner_id' => owner3.id})
-adoption4 = Adoption.new({'dragon_id' => dragon4.id, 'owner_id' => owner4.id})
-adoption5 = Adoption.new({'dragon_id' => dragon5.id, 'owner_id' => owner5.id})
-adoption6 = Adoption.new({'dragon_id' => dragon6.id, 'owner_id' => owner6.id})
-adoption7 = Adoption.new({'dragon_id' => dragon7.id, 'owner_id' => owner7.id})
-adoption8 = Adoption.new({'dragon_id' => dragon8.id, 'owner_id' => owner8.id})
-adoption9 = Adoption.new({'dragon_id' => dragon9.id, 'owner_id' => owner9.id})
-adoption10 = Adoption.new({'dragon_id' => dragon10.id, 'owner_id' => owner10.id})
+# adoption4 = Adoption.new({'dragon_id' => dragon4.id, 'owner_id' => owner4.id})
+# adoption5 = Adoption.new({'dragon_id' => dragon5.id, 'owner_id' => owner5.id})
+# adoption6 = Adoption.new({'dragon_id' => dragon6.id, 'owner_id' => owner6.id})
+# adoption7 = Adoption.new({'dragon_id' => dragon7.id, 'owner_id' => owner7.id})
+# adoption8 = Adoption.new({'dragon_id' => dragon8.id, 'owner_id' => owner8.id})
+# adoption9 = Adoption.new({'dragon_id' => dragon9.id, 'owner_id' => owner9.id})
+# adoption10 = Adoption.new({'dragon_id' => dragon10.id, 'owner_id' => owner10.id})
 
 adoption1.save
 adoption2.save
 adoption3.save
-adoption4.save
-adoption5.save
-adoption6.save
-adoption7.save
-adoption8.save
-adoption9.save
-adoption10.save
+# adoption4.save
+# adoption5.save
+# adoption6.save
+# adoption7.save
+# adoption8.save
+# adoption9.save
+# adoption10.save
 
 # --- jump into debug -------------------------------------
 binding.pry

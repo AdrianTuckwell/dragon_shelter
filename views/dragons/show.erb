@@ -1,10 +1,8 @@
-<br>
-<br>
 <a href="/dragons/<%= @dragon.id %>/edit">Edit</a> - <a href="/dragons">Return</a> <br>
 <br>
-<br>
 
-<div>
+<div class="clearfix float-my-children">
+  <img src="/images/<%=@dragon.type%>.png" alt="Cover" height="400" width="400">
 
   <a>
     Dragon Id : <%= @dragon.id %><br>  
@@ -17,7 +15,7 @@
     Trained Date : <%= @dragon.trained_date %><br>
   </a>
 </div>
-<center><img src="/images/<%=@dragon.type%>.png" alt="Cover" height="400" width="400"></center>
+<center></center>
 
 <br>
 
