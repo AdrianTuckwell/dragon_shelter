@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require 'pry-byebug'
 
 class Dragon
 
@@ -115,6 +116,14 @@ class Dragon
   def self.adopt_true( id )
     sql = "UPDATE dragons SET
           adopted =  'TRUE'
+          WHERE id=#{id}"
+    SqlRunner.run( sql )
+  end
+
+  # ---------------------------------------------------------
+  def self.adopt_false( id )
+    sql = "UPDATE dragons SET
+          adopted =  'FALSE'
           WHERE id=#{id}"
     SqlRunner.run( sql )
   end

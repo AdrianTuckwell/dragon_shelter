@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require 'pry-byebug'
 
 class Adoption
 
@@ -68,8 +69,12 @@ class Adoption
 
   # ---------------------------------------------------------
     def self.destroy(id)
+      sql = "SELECT * FROM adoptions WHERE id=#{id}"
+      result = Adoption.map_items(sql)
+      dragon_id = result.first.dragon_id
+      @dragon = Dragon.adopt_false(dragon_id)
       sql = "DELETE FROM adoptions WHERE id=#{id}"
-      SqlRunner.run( sql )
+      SqlRunner.run( sql ) 
     end
 
 end # --- Adoption class end -------------------------------
