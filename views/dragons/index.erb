@@ -13,10 +13,8 @@
       Name : <%= dragon.name %><br>
       Type : <%= dragon.type %><br>
       Admission Date : <%= dragon.admission_date %><br>
-      Adopted : <%= dragon.adopted %><br>
-      Adoption Date : <%= dragon.adoption_date %><br>
-      Trained : <%= dragon.trained %><br>
-      Trained Date: <%= dragon.trained_date %>
+      <%= dragon.adopted == 't' ? "Adopted : #{dragon.adoption_date}" : "Not adopted" %><br>
+      <%= dragon.trained == 't' ? "Trained : #{dragon.trained_date}" : 'Not Trained' %><br>
     </a>
     
     <br><hr>
